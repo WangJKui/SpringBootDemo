@@ -17,9 +17,9 @@ public class DepartmentTest {
 	@Autowired
 	private DepartmentMapper departmentMapper;
 
-	 private Logger logger =  LoggerFactory.getLogger(this.getClass());
+	private Logger logger =  LoggerFactory.getLogger(this.getClass());
 
-	
+
 	@Test
 	public void testInsert() {
 		Department department = new Department();

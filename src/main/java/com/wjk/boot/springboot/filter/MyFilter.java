@@ -9,7 +9,6 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
-import javax.servlet.annotation.WebListener;
 
 /**
  * 自定义Filter
@@ -19,7 +18,7 @@ import javax.servlet.annotation.WebListener;
  * @author h
  *
  */
-@WebFilter
+@WebFilter(urlPatterns = "/*",filterName = "myFilter")
 public class MyFilter implements Filter {
 
 	@Override

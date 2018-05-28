@@ -1,12 +1,6 @@
 package com.wjk.boot.springboot.webconfig;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.springframework.boot.autoconfigure.web.HttpMessageConverters;
-import org.springframework.boot.web.servlet.FilterRegistrationBean;
-import org.springframework.boot.web.servlet.ServletListenerRegistrationBean;
-import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.converter.HttpMessageConverter;
@@ -17,9 +11,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.alibaba.fastjson.support.config.FastJsonConfig;
 import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;
-import com.wjk.boot.springboot.filter.MyFilter;
-import com.wjk.boot.springboot.listener.ListenerTest;
-import com.wjk.boot.springboot.servlet.ServletTest;
 
 @Configuration
 public class WebConfig {
@@ -77,7 +68,7 @@ public class WebConfig {
 	 * 注册监听器为 Bean，在 WebConfig 配置类中添加如下代码：
 	 * @return
 	 */
-/*	@Bean
+	/*	@Bean
 	public ServletListenerRegistrationBean<ListenerTest> servletListenerRegistrationBean() {
 		return new ServletListenerRegistrationBean<ListenerTest>(new ListenerTest());
 	}*/
@@ -108,5 +99,5 @@ public class WebConfig {
     public ServerEndpointExporter serverEndpointExporter() {
         return new ServerEndpointExporter();
     }*/
-	
+
 }
