@@ -1,7 +1,9 @@
-package com.wjk.boot.springboot.junit;
+package com.wjk.boot.springboot;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
@@ -15,6 +17,9 @@ public class DepartmentTest {
 	@Autowired
 	private DepartmentMapper departmentMapper;
 
+	 private Logger logger =  LoggerFactory.getLogger(this.getClass());
+
+	
 	@Test
 	public void testInsert() {
 		Department department = new Department();
@@ -27,7 +32,7 @@ public class DepartmentTest {
 	@Test
 	public void testGetById() {
 		Department department = this.departmentMapper.getById(1);
-		System.out.println(department);
+		logger.debug(department.toString());
 	}
 
 	@Test

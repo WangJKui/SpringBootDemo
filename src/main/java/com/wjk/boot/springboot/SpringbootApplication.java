@@ -2,6 +2,7 @@ package com.wjk.boot.springboot;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.ServletComponentScan;
 import org.springframework.cache.annotation.EnableCaching;
 
 /*@ComponentScan("com.wjk.boot.springboot")
@@ -15,6 +16,7 @@ import org.springframework.cache.annotation.EnableCaching;
  * @author h
  *
  */
+@ServletComponentScan //注解Servlet，filter,listener
 @EnableCaching
 @SpringBootApplication
 public class SpringbootApplication {

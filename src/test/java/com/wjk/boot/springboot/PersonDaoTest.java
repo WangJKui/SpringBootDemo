@@ -1,4 +1,4 @@
-package com.wjk.boot.springboot.junit;
+package com.wjk.boot.springboot;
 
 import java.util.Date;
 
@@ -21,7 +21,7 @@ public class PersonDaoTest {
 	@Test
 	public void testInsert() {
 		Person person = new Person();
-		person.setId(2);
+		person.setId(3);
 		person.setUsername("张三");
 		person.setPassword("zhangsan");
 		person.setBirthday(new Date());

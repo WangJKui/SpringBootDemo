@@ -47,10 +47,10 @@ public class WebConfig {
 	 * 将 Servelt 注册成 Bean。在上文创建的 WebConfig 类中添加如下代码：
 	 * @return
 	 */
-	@Bean
+	/*@Bean
 	public ServletRegistrationBean servletRegistrationBean() {
 		return new ServletRegistrationBean(new ServletTest(),"/servletTest");
-	}
+	}*/
 
 	/**
 	 * 自定义Filter
@@ -59,7 +59,7 @@ public class WebConfig {
 		2) 添加到过滤器链中，此方式适用于使用第三方的过滤器。将过滤器写到 WebConfig 类中，如下：
 	 * @return
 	 */
-	@Bean
+	/*@Bean
 	public FilterRegistrationBean timeFilter() {
 		FilterRegistrationBean registrationBean = new FilterRegistrationBean();
 
@@ -71,16 +71,16 @@ public class WebConfig {
 		registrationBean.setUrlPatterns(urls);
 
 		return registrationBean;
-	}
+	}*/
 
 	/**
 	 * 注册监听器为 Bean，在 WebConfig 配置类中添加如下代码：
 	 * @return
 	 */
-	@Bean
+/*	@Bean
 	public ServletListenerRegistrationBean<ListenerTest> servletListenerRegistrationBean() {
 		return new ServletListenerRegistrationBean<ListenerTest>(new ListenerTest());
-	}
+	}*/
 
 	/**
 	 * 现在开始解决跨域问题，可以两种维度控制客户端请求。
