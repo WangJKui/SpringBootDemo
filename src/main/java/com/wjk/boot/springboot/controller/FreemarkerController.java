@@ -12,7 +12,7 @@ public class FreemarkerController {
 	@RequestMapping("/hello")
 	public String hello(Map<String,Object> map) {
 
-		map.put("msg", "Hello Freemarker");
+		map.put("msg", "Hello Freemarker张三");
 		return "hello";
 	}
 	
@@ -20,5 +20,13 @@ public class FreemarkerController {
 	public String websocket() {
 
 		return "websocket";
+	}
+	
+	@RequestMapping("/test01")
+	public String freemarker(Map<String,Object> map) {
+		
+		map.put("user", "张三");
+
+		return "freemarker/test01";
 	}
 }

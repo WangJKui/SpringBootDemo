@@ -3,8 +3,6 @@ package com.wjk.boot.springboot.vo;
 import java.io.Serializable;
 import java.util.Date;
 
-import com.alibaba.fastjson.annotation.JSONField;
-
 public class Person implements Serializable{
 	/**
 	 * 

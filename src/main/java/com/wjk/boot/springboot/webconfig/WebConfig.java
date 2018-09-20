@@ -1,12 +1,6 @@
 package com.wjk.boot.springboot.webconfig;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import org.springframework.boot.autoconfigure.web.HttpMessageConverters;
-import org.springframework.boot.web.servlet.FilterRegistrationBean;
-import org.springframework.boot.web.servlet.ServletListenerRegistrationBean;
-import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.converter.HttpMessageConverter;
@@ -17,9 +11,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter
 import com.alibaba.fastjson.serializer.SerializerFeature;
 import com.alibaba.fastjson.support.config.FastJsonConfig;
 import com.alibaba.fastjson.support.spring.FastJsonHttpMessageConverter;
-import com.wjk.boot.springboot.filter.MyFilter;
-import com.wjk.boot.springboot.listener.ListenerTest;
-import com.wjk.boot.springboot.servlet.ServletTest;
 
 @Configuration
 public class WebConfig {
@@ -47,10 +38,10 @@ public class WebConfig {
 	 * 将 Servelt 注册成 Bean。在上文创建的 WebConfig 类中添加如下代码：
 	 * @return
 	 */
-	@Bean
+	/*@Bean
 	public ServletRegistrationBean servletRegistrationBean() {
 		return new ServletRegistrationBean(new ServletTest(),"/servletTest");
-	}
+	}*/
 
 	/**
 	 * 自定义Filter
@@ -59,7 +50,7 @@ public class WebConfig {
 		2) 添加到过滤器链中，此方式适用于使用第三方的过滤器。将过滤器写到 WebConfig 类中，如下：
 	 * @return
 	 */
-	@Bean
+	/*@Bean
 	public FilterRegistrationBean timeFilter() {
 		FilterRegistrationBean registrationBean = new FilterRegistrationBean();
 
@@ -71,16 +62,16 @@ public class WebConfig {
 		registrationBean.setUrlPatterns(urls);
 
 		return registrationBean;
-	}
+	}*/
 
 	/**
 	 * 注册监听器为 Bean，在 WebConfig 配置类中添加如下代码：
 	 * @return
 	 */
-	@Bean
+	/*	@Bean
 	public ServletListenerRegistrationBean<ListenerTest> servletListenerRegistrationBean() {
 		return new ServletListenerRegistrationBean<ListenerTest>(new ListenerTest());
-	}
+	}*/
 
 	/**
 	 * 现在开始解决跨域问题，可以两种维度控制客户端请求。
@@ -108,5 +99,5 @@ public class WebConfig {
     public ServerEndpointExporter serverEndpointExporter() {
         return new ServerEndpointExporter();
     }*/
-	
+
 }

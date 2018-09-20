@@ -2,12 +2,14 @@ package com.wjk.boot.springboot.listener;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
+import javax.servlet.annotation.WebListener;
 
 /**
  * 注册监听器
  * @author h
  *
  */
+@WebListener
 public class ListenerTest implements ServletContextListener {
 
     @Override

@@ -3,6 +3,8 @@ package com.wjk.boot.springboot.controller;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -20,6 +22,8 @@ public class DepartmentController {
 	@Autowired
 	private DepartmentService departmentService;
 
+	 private Logger logger =  LoggerFactory.getLogger(this.getClass());
+	
 	@RequestMapping("save")
 	public Map<String,Object> save(@RequestBody Department department) {
 		this.departmentService.save(department);
@@ -27,6 +31,10 @@ public class DepartmentController {
 		Map<String,Object> map = new HashMap<String,Object>();
 		map.put("code", "200");
 		map.put("msg", "保存成功");
+		
+		logger.info(map.toString());
+		logger.debug(map.toString());
+		logger.warn(map.toString());
 		return map;
 	}
 

@@ -21,4 +21,5 @@ public class RedisDao {
 	public void delete(String key) {
 		this.stringRedisTemplate.delete(key);
 	}
+	
 }
