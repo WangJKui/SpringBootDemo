@@ -1,4 +1,4 @@
-/*package com.wjk.boot.springboot.dao;
+package com.wjk.boot.springboot.dao;
 
 import java.util.List;
 
@@ -27,6 +27,10 @@ public class MongodbDao {
         this.mongoTemplate.remove(query, Department.class);
     }
 
+    /**
+     * 
+     * @param department
+     */
     public void update(Department department) {
         Criteria criteria = Criteria.where("id").is(department.getId());
         Query query = new Query(criteria);
@@ -46,4 +50,3 @@ public class MongodbDao {
         return userList;
     }
 }
-*/

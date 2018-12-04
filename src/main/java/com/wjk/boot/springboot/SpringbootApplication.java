@@ -21,6 +21,10 @@ import org.springframework.cache.annotation.EnableCaching;
 @SpringBootApplication
 public class SpringbootApplication {
 
+	
+
+
+	
 	/**
 	 * application-dev.properties：用于开发环境
 application-test.properties：用于测试环境
@@ -30,4 +34,5 @@ application-prod.properties：用于生产环境
 	public static void main(String[] args) {
 		SpringApplication.run(SpringbootApplication.class, args);
 	}
+	
 }
