@@ -10,6 +10,8 @@ import java.util.Date;
  */
 public class ${table_name} implements Serializable {
 
+	private static final long serialVersionUID = 1L;
+	
     <#if model_column?exists>
     <#list model_column as model>
 	/**
